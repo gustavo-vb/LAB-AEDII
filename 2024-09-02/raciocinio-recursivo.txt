@@ -1,0 +1,45 @@
+RECURSIVIDADE
+=============
+
+
+Modelagem de Solução Recursiva de um Problema
+
+1.Multiplicação Usando Somatório
+
+n1 -> somador
+n2 -> contador
+
+n1 = 5
+n2 = 4
+
+
+n1  n2  p
+===========
+5   4   0  - (Valores padrão das variáveis)
+5   4   5
+5   3   10
+5   2   15
+5   1   20  - (Retorno)
+5   0  C.P. - (Condição de Parada)
+
+
+-----------------------------------------------------------------------------------------
+
+main -> multiplicacaoSomaRecursiva #0 (5,4)
+	return (5 + multiplicacaoSomaRecursiva #1 (5,3))
+	    /> return (5+15) = 20
+
+     -> multiplicacaoSomaRecursiva #1 (5,3)
+	return (5 + multiplicacaoSomaRecursiva #2 (5,2))
+	    /> return (5+10)
+
+     -> multiplicacaoSomaRecursiva #2 (5,2)
+	return (5 + multiplicacaoSomaRecursiva #3 (5,1))
+	    /> return (5+5)
+
+     -> multiplicacaoSomaRecursiva #3 (5,1)
+	return (5 + multiplicacaoSomaRecursiva #4 (5,0))
+	    /> return (5+0)
+
+     -> multiplicacaoSomaRecursiva #4 (5,0)
+	return 0
